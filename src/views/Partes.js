@@ -15,7 +15,7 @@ import {
 import EditarClienteBtn from "components/Clientes/EditarClienteBtn";
 import BtnAgregarParte from "components/Partes/AgregarParteBtn";
 import EditarParteBtn from "components/Partes/EditarParteBtn";
-import API_URL from "../../export";
+import API_URL from "../export";
 
 function TableList() {
   const [currentPage, setCurrentPage] = useState(1);

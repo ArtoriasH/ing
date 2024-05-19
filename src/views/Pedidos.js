@@ -17,7 +17,7 @@ import {
 import EditarClienteBtn from "components/Clientes/EditarClienteBtn";
 import BtnAgregarCostoExtra from "components/Pedidos/AgregarCostoExtra";
 import EditarCostoExtra from "components/Pedidos/EditarCostoExtra";
-import API_URL from "../../export";
+import API_URL from "../export";
 
 function TableList() {
   const itemsPerPage = 5;

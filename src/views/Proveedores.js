@@ -14,7 +14,7 @@ import {
 } from "react-bootstrap";
 import EditarClienteBtn from "components/Clientes/EditarClienteBtn";
 import EditarProveedorBtn from "components/Proveedores/EditarProveedor";
-import API_URL from "../../export";
+import API_URL from "../export";
 
 function TableList() {
   const [currentPage, setCurrentPage] = useState(1);

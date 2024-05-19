@@ -3,7 +3,7 @@ import { Pagination, Card, Container, Row, Col, Table } from "react-bootstrap";
 import BusquedaBoxClientes from "components/ComponentesSimples/BusquedaClientes";
 import BtnAgregarCliente from "components/Clientes/AgregarClienteBtn";
 import EditarClienteBtn from "components/Clientes/EditarClienteBtn";
-import API_URL from "../../export";
+import API_URL from "../export";
 
 function TableList() {
   const [currentPage, setCurrentPage] = useState(1);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Dropdown, Nav, Modal, Button, Form, Row, Col } from "react-bootstrap";
-import API_URL from "../../../export";
+import API_URL from "../../export";
 
 const EditarProveedorBtn = ({ onEditClick, item, onUpdateTable }) => {
   const [showModal, setShowModal] = useState(false);

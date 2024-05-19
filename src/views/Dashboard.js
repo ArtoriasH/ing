@@ -16,7 +16,7 @@ import {
 } from "react-bootstrap";
 import ToggleButtonExample from "components/Pedidos/AgregarPedidoBtn";
 import BusquedaBoxClientes from "components/ComponentesSimples/BusquedaClientes";
-import API_URL from "../../export";
+import API_URL from "../export";
 
 function TableList() {
   const itemsPerPage = 10;

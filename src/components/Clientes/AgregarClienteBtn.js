@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from "react";
 import { Button, Modal, Form, Row, Col, Alert} from "react-bootstrap";
 import { InputGroup, FormControl } from "react-bootstrap";
-import API_URL from "../../../export";
+import API_URL from "../../export";
 
 function BtnAgregarCliente({ onUpdateTable }) {
   const [showModal, setShowModal] = useState(false);
