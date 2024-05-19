@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Dropdown, Nav, Modal, Button, Form, Row, Col } from "react-bootstrap";
+import API_URL from "../../../export";
 
 
 //item es la info del cliente
@@ -40,7 +41,7 @@ const EditarClienteBtn = ({ onEditClick, item, onUpdateTable}) => {
       },
     };
 
-    const r = await fetch("http://localhost:3001/api/v1/cliente/"+item.idCliente, config).then(
+    const r = await fetch(API_URL + "/api/v1/cliente/"+item.idCliente, config).then(
       (res) => res.json()
     );
 
@@ -82,7 +83,7 @@ const EditarClienteBtn = ({ onEditClick, item, onUpdateTable}) => {
       body: JSON.stringify(payload),
     };
 
-    const r = await fetch("http://localhost:3001/api/v1/cliente/"+item.idCliente, config).then(
+    const r = await fetch(API_URL + "/api/v1/cliente/"+item.idCliente, config).then(
       (res) => res.json()
     );
 

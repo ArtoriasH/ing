@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Modal, Form, Row, Col } from "react-bootstrap";
 import { InputGroup, FormControl } from "react-bootstrap";
+import API_URL from "../../../export";
 
 function BtnAgregarPedido({ onUpdateTable, clientes }) {
   const [showModal, setShowModal] = useState(false);
@@ -45,7 +46,7 @@ function BtnAgregarPedido({ onUpdateTable, clientes }) {
       body: JSON.stringify(payload),
     };
 
-    const r = await fetch("http://localhost:3001/api/v1/pedido/", config).then(
+    const r = await fetch(API_URL + "/api/v1/pedido/", config).then(
       (res) => res.json()
     );
 

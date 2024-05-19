@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Dropdown, Nav, Modal, Button, Form, Row, Col } from "react-bootstrap";
+import API_URL from "../../../export";
 
 const EditarProveedorBtn = ({ onEditClick, item, onUpdateTable }) => {
   const [showModal, setShowModal] = useState(false);
@@ -38,7 +39,7 @@ const EditarProveedorBtn = ({ onEditClick, item, onUpdateTable }) => {
     };
 
     const r = await fetch(
-      "http://localhost:3001/api/v1/proveedor/" + item.idProveedor,
+      API_URL + "/api/v1/proveedor/" + item.idProveedor,
       config
     ).then((res) => res.json());
 
@@ -78,7 +79,7 @@ const EditarProveedorBtn = ({ onEditClick, item, onUpdateTable }) => {
     };
 
     const r = await fetch(
-      "http://localhost:3001/api/v1/proveedor/" + item.idProveedor,
+      API_URL + "/api/v1/proveedor/" + item.idProveedor,
       config
     ).then((res) => res.json());
 

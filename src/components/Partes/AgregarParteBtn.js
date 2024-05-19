@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Form, Row, Col } from "react-bootstrap";
 import { InputGroup, FormControl } from "react-bootstrap";
+import API_URL from "../../../export";
 
 function BtnAgregarParte({ onUpdateTable }) {
   const [showModal, setShowModal] = useState(false);
@@ -37,7 +38,7 @@ function BtnAgregarParte({ onUpdateTable }) {
       body: JSON.stringify(payload),
     };
 
-    const r = await fetch("http://localhost:3001/api/v1/inventario/", config).then(
+    const r = await fetch( API_URL + "/api/v1/inventario/", config).then(
       (res) => res.json()
     );
 

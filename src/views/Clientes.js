@@ -3,6 +3,7 @@ import { Pagination, Card, Container, Row, Col, Table } from "react-bootstrap";
 import BusquedaBoxClientes from "components/ComponentesSimples/BusquedaClientes";
 import BtnAgregarCliente from "components/Clientes/AgregarClienteBtn";
 import EditarClienteBtn from "components/Clientes/EditarClienteBtn";
+import API_URL from "../../export";
 
 function TableList() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,7 +17,7 @@ function TableList() {
   useEffect(() => {
     const getClienteData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/v1/cliente/");
+        const response = await fetch(API_URL + "/api/v1/cliente/");
         if (!response.ok) {
           throw new Error('Network response was not ok.');
         }

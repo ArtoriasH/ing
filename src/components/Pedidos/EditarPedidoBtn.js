@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Dropdown, Nav, Modal, Button, Form, Row, Col } from "react-bootstrap";
+import API_URL from "../../../export";
 
 const EditarPedidoBtn = ({
   onEditClick,
@@ -68,7 +69,7 @@ const EditarPedidoBtn = ({
     };
 
     const r = await fetch(
-      "http://localhost:3001/api/v1/pedido/" + item.idPedido,
+      API_URL + "/api/v1/pedido/" + item.idPedido,
       config
     ).then((res) => res.json());
 
@@ -113,7 +114,7 @@ const EditarPedidoBtn = ({
     };
 
     const r = await fetch(
-      "http://localhost:3001/api/v1/pedido/" + item.idPedido,
+      API_URL + "/api/v1/pedido/" + item.idPedido,
       config
     ).then((res) => res.json());
 
@@ -149,7 +150,7 @@ const EditarPedidoBtn = ({
     };
 
     const r = await fetch(
-      "http://localhost:3001/api/v1/gastoExtra/",
+      API_URL + "/api/v1/gastoExtra/",
       config
     ).then((res) => res.json());
 

@@ -14,6 +14,7 @@ import {
 } from "react-bootstrap";
 import EditarClienteBtn from "components/Clientes/EditarClienteBtn";
 import EditarProveedorBtn from "components/Proveedores/EditarProveedor";
+import API_URL from "../../export";
 
 function TableList() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -29,7 +30,7 @@ function TableList() {
   useEffect(() => {
     const getProveedorData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/v1/proveedor/");
+        const response = await fetch(API_URL + "/api/v1/proveedor/");
         if (!response.ok) {
           throw new Error("Network response was not ok.");
         }

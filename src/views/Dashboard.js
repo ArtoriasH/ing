@@ -16,6 +16,7 @@ import {
 } from "react-bootstrap";
 import ToggleButtonExample from "components/Pedidos/AgregarPedidoBtn";
 import BusquedaBoxClientes from "components/ComponentesSimples/BusquedaClientes";
+import API_URL from "../../export";
 
 function TableList() {
   const itemsPerPage = 10;
@@ -33,7 +34,7 @@ function TableList() {
     const getPedidoData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3001/api/v1/pedido/dashboard"
+          API_URL + "/api/v1/pedido/dashboard"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok.");

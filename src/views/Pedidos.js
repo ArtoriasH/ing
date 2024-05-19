@@ -17,6 +17,7 @@ import {
 import EditarClienteBtn from "components/Clientes/EditarClienteBtn";
 import BtnAgregarCostoExtra from "components/Pedidos/AgregarCostoExtra";
 import EditarCostoExtra from "components/Pedidos/EditarCostoExtra";
+import API_URL from "../../export";
 
 function TableList() {
   const itemsPerPage = 5;
@@ -38,7 +39,7 @@ function TableList() {
   useEffect(() => {
     const getClienteData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/v1/cliente/");
+        const response = await fetch(API_URL + "/api/v1/cliente/");
         if (!response.ok) {
           throw new Error("Network response was not ok.");
         }
@@ -55,7 +56,7 @@ function TableList() {
   useEffect(() => {
     const getProveedorData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/v1/proveedor/");
+        const response = await fetch(API_URL + "/api/v1/proveedor/");
         if (!response.ok) {
           throw new Error("Network response was not ok.");
         }
@@ -72,7 +73,7 @@ function TableList() {
   useEffect(() => {
     const getPedidoData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/v1/pedido/");
+        const response = await fetch(API_URL + "/api/v1/pedido/");
         if (!response.ok) {
           throw new Error("Network response was not ok.");
         }
@@ -90,7 +91,7 @@ function TableList() {
     const getGastoData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3001/api/v1/gastoExtra/"
+          API_URL + "/api/v1/gastoExtra/"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok.");

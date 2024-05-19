@@ -15,6 +15,7 @@ import {
 import EditarClienteBtn from "components/Clientes/EditarClienteBtn";
 import BtnAgregarParte from "components/Partes/AgregarParteBtn";
 import EditarParteBtn from "components/Partes/EditarParteBtn";
+import API_URL from "../../export";
 
 function TableList() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,7 +31,7 @@ function TableList() {
     const getInventarioData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3001/api/v1/inventario/"
+          API_URL +"/api/v1/inventario/"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok.");
